@@ -1,0 +1,153 @@
+
+@font-face {
+    font-family: Young Serif;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Outfit;
+    font-weight: 400 600 700;
+    font-display: swap;
+    src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Stone_100: hsl(30, 54%, 90%);
+    --Stone_150: hsl(30, 18%, 87%);
+    --Stone_600: hsl(30, 10%, 34%);
+    --Stone_900: hsl(24, 5%, 18%);
+    --Brown_800: hsl(14, 45%, 36%);
+    --Rose_800: hsl(332, 51%, 32%);
+    --Rose_50: hsl(330, 100%, 98%);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--Stone_100);
+    color: var(--Stone_900);
+    margin: 0;
+    padding: 24px;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 40px;
+    background-color: white;
+    width: 100%;
+    max-width: 750px;
+    box-sizing: border-box;
+    border-radius: 24px;
+}
+
+img.hero {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.recipe-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px solid var(--Stone_150);
+    padding-bottom: 1.6rem;
+}
+
+.recipe-section:last-child {
+    border: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-family: 'Young Serif', Serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Young Serif', Serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--Brown_800);
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+p {
+    margin: 0;
+}
+
+ul, ol {
+    margin: 0;
+    padding-inline-start: 1rem;
+}
+
+li {
+    padding-inline-start: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+li::marker {
+    color: var(--Brown_800);
+}
+
+.prep_time {
+    border-radius: 16px;
+    background-color: var(--Rose_50);
+    width: 100%; /* Ensure this child behaves nicely within the flex column */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.prep_time h3 {
+    color: var(--Rose_800);
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.prep_time ul li::marker {
+    color: var(--Rose_800);
+}
+
+.nutrition_table {
+    width: 100%;
+    margin-top: 0.8rem;
+    border-collapse: collapse;
+}
+
+.nutrition_table th,
+.nutrition_table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--Stone_150);
+    text-align: left;
+}
+
+.nutrition_table th {
+    font-weight: 400;
+}
+
+.nutrition_table td:last-child {
+    color: var(--Brown_800);
+    font-weight: 700;
+}
+
+.nutrition_table tr:last-child th,
+.nutrition_table tr:last-child td {
+    border-bottom: 0;
+}
